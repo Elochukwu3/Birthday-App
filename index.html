@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Wishes</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="jason.js" defer></script>
     <script src="app.js" defer></script>
@@ -20,6 +21,7 @@
                     <h2>Cards and wishes</h2>
                     <p>@Romauld JB</p>
                 </div>
+                
                 <div id="card-design-Div">
                     <div class="designing-container">
                         <div id="card-wishesDiv">
@@ -103,10 +105,39 @@
                                             <input type="text" placeholder="name" class="nameInput" id="name"
                                                 name="nameInput" required>
                                         </div>
-                                        <div class=" formSect"><label for="firstNme">Number</label>
-                                            <input type="text" placeholder="+2340001010" class="nameInput" id="number"
-                                                required>
+                                        <div class="formSect" style="width: 100%;">
+                                            <div><label for="code" style="margin-left: 3px ;">Country Code</label>/ <label for="firstNme">Number</label> </div>
+                                            <select name="" id="code" style="width: 27%;">
+                                                <option value="code" selected disabled>Code</option>
+                                                <option value="+93">+93</option>
+                                                <option value="+355">+358</option>
+                                                <option value="+61">+61</option>
+                                                <option value="+234">+234</option>
+                                                <option value="+855">+855</option>
+                                                <option value="+1">+1</option>
+                                                <option value="+56">+56</option>
+                                                <option value="+86">+86</option>
+                                                <option value="+242">+242</option>
+                                                <option value="+255">+255</option>
+                                                <option value="+356">+358</option>
+                                                <option value="+234">+234</option>
+                                                <option value="+91">+91</option>
+                                                <option value="+39">+39</option>
+                                                <option value="+233">+233</option>
+                                                <option value="+212">+212</option>
+                                                <option value="+31">+31</option>
+                                                <option value="+27">+27</option>
+                                                <option value="+44">+44</option>
+                                                <option value="+260">+260</option>
+                                                <option value="+90">90</option>
+                                                <option value="+288">+288</option>
+                                                <option value="+46">46</option>
+                                                <option value="+698">+678</option>
+                                            </select>
+                                        <input type="text" placeholder="40001010" class="nameInput" id="number"
+                                                required style="width: 70%;">
                                         </div>
+                                        
 
                                         <div class="formSect">
                                             <div><label for="firstNme">Date 0f Birth</label></div>
@@ -166,7 +197,7 @@
                                             </div>
                                         </div>
                                         <div class="imageDiv">
-                                         <p>Friend's Picture</p>
+                                         <p>Friend's Picture(small sized)</p>
                                             <input type="file" accept="image/*" class="imageInput">
                                         </div>
                                         <div id="btn-Div">

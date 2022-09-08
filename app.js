@@ -3,6 +3,7 @@ const formDiv = document.querySelector("#formDiv");
 let nameInput = document.getElementById("name");
 let number = document.getElementById("number");
 let day = document.getElementById("day");
+let code = document.getElementById("code");
 let month = document.getElementById("month");
 let year = document.getElementById("year");
 let image = document.querySelector(".imageInput");
@@ -26,12 +27,13 @@ const idNum = `${nameInput.value}${randomNum}`;
 let birthday = JSON.parse(localStorage.getItem("birthDays")) || [];
 let timeDisplay = document.querySelector(".time")
 timeDisplay.textContent = `${presentDate}/${presentMonth}/${currentYear}`
-
+console.log(code.value);
 function instruct() {
   displayContainer.innerHTML = "";
   instructionDiv.classList.toggle("clenn")
   welcome.innerHTML = "";
   sliderPage.classList.remove("sliderClose")
+  formDiv.classList.remove("formIn");
 }
 function showForm() {
 
@@ -70,6 +72,7 @@ form.addEventListener("submit", (e) => {
     id: idNum,
     image: imageUrl,
     ageValue: age,
+    codeVal: code.value,
   };
   birthday.push(eachBirthDay);
   localStorage.setItem("birthDays", JSON.stringify(birthday));
@@ -152,6 +155,7 @@ let filt;
     const btnCall = document.createElement("button");
     const btnMsg = document.createElement("button");
     const btnWhats = document.createElement("button");
+    const btnWhatsI = document.createElement("i");
 
     showItems(bd, ageValue);
     callMsg.appendChild(callCont);
@@ -163,15 +167,17 @@ let filt;
     aCall.appendChild(btnCall);
     aMsg.appendChild(btnMsg);
     aWhats.appendChild(btnWhats);
+    btnWhats.appendChild(btnWhatsI)
     btnCall.innerHTML = "&#128222";
     btnMsg.innerHTML = "&#x2709;";
-    btnWhats.innerHTML = "&#xF618;";
+    btnWhatsI.classList.add("fa-whatsapp")
     callMsg.classList.add("callmsg");
     displayContainer.classList.add("flex");
     container.classList.add("clean");
     aCall.href = `Tel: ${bd.number}`;
-    aMsg.href = `sms:${bd.number}`;
-    aWhats.href = `https://wa.me/${bd.number}`;
+    aMsg.href = `sms:${bd.codeVal}${bd.number}`;
+    aWhats.href = `https://wa.me/${bd.codeVal}${bd.number}`;
+    console.log(bd.codeVal);
   
   });
 });

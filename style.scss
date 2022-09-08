@@ -175,10 +175,11 @@
     max-height: 0px;
     position: absolute;
     bottom: 0;
+    overflow: hidden;
     }
     #formDiv.formIn{
-        max-height: 100%;
-        overflow: scroll;
+        max-height: 70vh;
+        // overflow: scroll;
     }
     .formHeader{
         text-align: center;
@@ -372,7 +373,6 @@
     }
     .instruction{
         width: 100%;
-        background: repeating-linear-gradient(65deg, rgb(7, 7, 242), rgb(230, 23, 92) 60%);
         color: #f0F0F0;
         padding-bottom: 10px;
         height: 70vh;
@@ -393,9 +393,10 @@
     .instruction ul li{
         display: flex;
         padding: 5px;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 500;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        line-height: 18px;
     }
     .instruction ul li div{
         margin-right: 10px;
@@ -464,4 +465,10 @@
     }
     .right{ right: 10px;}
     .left{ left: 0px;}
+    #code{
+        width: 30%;
+    }
+    .fa-whatsapp{
+        color: white;
+    }
 }
