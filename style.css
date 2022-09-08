@@ -133,6 +133,7 @@
 #card-container .tab-double img {
   padding: 0 1rem;
   width: 55px;
+  cursor: pointer;
 }
 #card-container .plus-tab {
   width: 50px;
@@ -155,13 +156,14 @@
   width: 100%;
   background-color: rgb(237, 212, 231);
   transition: max-height 0.7s ease-out;
-  overflow: hidden;
+  padding-bottom: 10px;
   max-height: 0px;
   position: absolute;
   bottom: 0;
 }
 #card-container #formDiv.formIn {
-  max-height: 500px;
+  max-height: 100%;
+  overflow: scroll;
 }
 #card-container .formHeader {
   text-align: center;
@@ -224,6 +226,7 @@
 #card-container .birthday-boxes {
   width: 100%;
   background-color: rgb(216, 14, 81);
+  height: 75vh;
 }
 #card-container .display-imageDiv {
   width: 100%;
@@ -349,6 +352,10 @@
   background: repeating-linear-gradient(65deg, rgb(7, 7, 242), rgb(230, 23, 92) 60%);
   color: #f0F0F0;
   padding-bottom: 10px;
+  height: 70vh;
+}
+#card-container .instruction.clenn {
+  display: none;
 }
 #card-container .guide {
   text-align: center;

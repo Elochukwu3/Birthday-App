@@ -171,13 +171,14 @@
     width: 100%;
      background-color: rgb(237, 212, 231);
     transition: max-height 0.7s ease-out;
-    overflow: hidden;
+    padding-bottom: 10px;
     max-height: 0px;
     position: absolute;
     bottom: 0;
     }
     #formDiv.formIn{
-        max-height: 500px;
+        max-height: 100%;
+        overflow: scroll;
     }
     .formHeader{
         text-align: center;
@@ -242,7 +243,7 @@
     .birthday-boxes{
         width: 100%;
         background-color: rgb(216, 14, 81);
-        // height: auto;
+        height: 75vh;
     }
     .display-imageDiv{
         width: 100%;
@@ -374,7 +375,10 @@
         background: repeating-linear-gradient(65deg, rgb(7, 7, 242), rgb(230, 23, 92) 60%);
         color: #f0F0F0;
         padding-bottom: 10px;
-        
+        height: 70vh;
+    }
+    .instruction.clenn{
+        display: none;
     }
     .guide{
         text-align: center;
@@ -392,20 +396,17 @@
         font-size: 14px;
         font-weight: 500;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        // justify-content: space-between;
     }
     .instruction ul li div{
         margin-right: 10px;
     }
     .instruction img{
         width: 14px;
-        // margin-right: 10px;
     }
     .plus-tab1{
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        // padding: 2px;
         display: flex;
         align-items: center;
         justify-content: center;  

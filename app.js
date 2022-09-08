@@ -29,21 +29,21 @@ timeDisplay.textContent = `${presentDate}/${presentMonth}/${currentYear}`
 
 function instruct() {
   displayContainer.innerHTML = "";
-  instructionDiv.style.display = "block";
-  welcome.innerHTML = "Guideline";
-  sliderCont.innerHTML = "";
+  instructionDiv.classList.toggle("clenn")
+  welcome.innerHTML = "";
+  sliderPage.classList.remove("sliderClose")
 }
 function showForm() {
 
-  instructionDiv.style.display = "none";
+  instructionDiv.classList.add("clenn")
   welcome.innerHTML = "";
   displayContainer.innerHTML = "";
   formDiv.classList.toggle("formIn");
   sliderPage.classList.remove("sliderClose")
 }
 function closeForm() {
-  // sliderCont.innerHTML = "";
-  // instructionDiv.style.display = "none";
+  sliderPage.classList.remove("sliderClose")
+  instructionDiv.classList.add("clenn")
   formDiv.classList.remove("formIn");
 }
 
@@ -80,7 +80,7 @@ form.addEventListener("submit", (e) => {
 });
 
 const showItems = (bd, ageValue) => {
-  instructionDiv.style.display = "none";
+  instructionDiv.classList.add("clenn")
   sliderCont.innerHTML = "";
   const containerInner = document.createElement("div");
   const ImageDiv = document.createElement("p");
@@ -106,6 +106,7 @@ const showItems = (bd, ageValue) => {
 };
 
 function card() {
+  formDiv.classList.remove("formIn");
   sliderPage.classList.remove("sliderClose")
   welcome.innerHTML = "List of Saved Bithday Celebrants";
   displayContainer.classList.remove("flex");
@@ -124,6 +125,7 @@ messageIcon.addEventListener("click", card);
 presentBirthDayBtn.addEventListener("click", () => {
 let filt;
   sliderPage.classList.remove("sliderClose")
+  formDiv.classList.remove("formIn");
   welcome.innerHTML = "list of Birthday Celebrant(s) Today";
   displayContainer.innerHTML = "";
   //    if nothing is in the localStorage
@@ -143,32 +145,40 @@ let filt;
     // callMsg = document.createElement("div");
     const callCont = document.createElement("p");
     const msgCont = document.createElement("p");
+    const whatsCont = document.createElement("p");
     const aCall = document.createElement("a");
     const aMsg = document.createElement("a");
+    const aWhats = document.createElement("a");
     const btnCall = document.createElement("button");
     const btnMsg = document.createElement("button");
+    const btnWhats = document.createElement("button");
 
     showItems(bd, ageValue);
     callMsg.appendChild(callCont);
     callMsg.appendChild(msgCont);
+    callMsg.appendChild(whatsCont);
     callCont.appendChild(aCall);
     msgCont.appendChild(aMsg);
+    whatsCont.appendChild(aWhats)
     aCall.appendChild(btnCall);
     aMsg.appendChild(btnMsg);
+    aWhats.appendChild(btnWhats);
     btnCall.innerHTML = "&#128222";
     btnMsg.innerHTML = "&#x2709;";
+    btnWhats.innerHTML = "&#xF618;";
     callMsg.classList.add("callmsg");
     displayContainer.classList.add("flex");
     container.classList.add("clean");
     aCall.href = `Tel: ${bd.number}`;
-    aMsg.href = `https://wa.me/${bd.number}`;
-    // console.log(aCall.href);
+    aMsg.href = `sms:${bd.number}`;
+    aWhats.href = `https://wa.me/${bd.number}`;
+  
   });
 });
 
 function msg() {
   formDiv.classList.remove("formIn");
-  instructionDiv.style.display = "none";
+  instructionDiv.classList.add("clenn")
   welcome.innerHTML = "Select and copy a wish/Msg to Clipboard";
   sliderPage.classList.add("sliderClose")
   displayContainer.innerHTML = "";
@@ -199,14 +209,10 @@ function msg() {
   // copy text
  let myWish = document.querySelector(".myWish");
   const copy = document.querySelectorAll(".copyIcon");
-  // const copied = document.querySelector(".copied");
-  // copied.innerHTML = ""
- 
   copy.forEach((c) => {
     c.addEventListener("click", (e) => {
       myWish = myWish.textContent;
       navigator.clipboard.writeText(myWish);
-   
     });
     
   });
@@ -229,7 +235,6 @@ function msg() {
 
   let right = document.querySelector(".right");
   right.addEventListener("click", function () {
-    // slide = document.getElementsByClassName("slide")
     slidePosition = slidePosition + 1;
     for (let index = 0; index < slide.length; index++) {
       slide[index].style.display = "none";
@@ -237,7 +242,6 @@ function msg() {
     if (slidePosition > slide.length) {
       slidePosition = 1;
     }
-
     slide[slidePosition - 1].style.display = "block";
   });
   let left = document.querySelector(".left");
