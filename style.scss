@@ -1,0 +1,465 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#card-container{
+    .card-wrapper{
+        display: flex;
+        justify-content: center;
+        overflow: scroll;
+    }
+    #card-inner{
+        width: 500px;
+        height: auto;
+    }
+    .header-text{
+        text-align: center;
+        color: navy;
+    }
+   .header-text h2{
+    letter-spacing: 6px;
+   }
+    #card-design-Div{
+        width: 100%;
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+    }
+    .designing-container{
+        width: 90%;
+        background: repeating-linear-gradient(320deg, rgb(51, 51, 208), rgb(169, 15, 66), navy);
+        
+        border-radius: 30px;
+        // background-color: chartreuse;
+        
+    }
+    #card-wishesDiv{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 15vh;
+        padding: 10px 0;
+       
+        color: #fff;
+    }
+    #card-button{
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    #card-button{
+        color: gray;
+        width: 100%;
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    #designer2-container{
+        height: auto;
+        width: 100%;
+        border: 1px solid red;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 30px;
+    }
+    .btnDiv{
+        width: 80%;
+        display: flex;
+       box-shadow: 0px 0px 3px #1c1c46;
+       border: unset;
+       outline: none;
+       border-radius: 11px;
+    }
+    .Btn{
+        appearance: none;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        border: unset;
+        background-color: #fff;
+        border-radius: 11px;
+        text-transform: uppercase;
+        color: #5a5a5a;
+        font-weight: 700;
+        // display: flex;
+        // justify-content: center;
+    }
+    .Btn:hover{
+        background: rgb(3, 24, 98);
+        color: white;
+    }
+    .Btn::after{
+        content: "";
+        display: block;
+        width:0;
+        background-color: rgb(237, 237, 237);
+        height: 2px;
+        margin: auto;
+        transition: 0.5s;
+    }
+    .Btn:hover::after{
+        width: 35%;
+    }
+    
+    .grid-icons{
+        display: flex;
+        justify-content: space-between;
+        margin: 7px 0px;
+        font-size: 1.7em;
+        padding: 0 10px;
+        color: whitesmoke;
+        background: rgb(216, 14, 81);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        align-items: center;
+    }
+    .birthday-boxes{
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 50vh;
+        overflow: scroll;
+    }
+
+    .tabIcons{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #f2f2f2, purple);
+        border-radius: 30px;
+        padding: 10px 2px;
+        align-items: center;
+        box-shadow: 5px 5px 7px #5a5a5a,
+        -5px -5px 7px rgb(2, 2, 2);
+        position: relative;
+    
+    }
+
+    .tab-double img{
+        padding: 0 1rem;    
+        width: 55px;
+    }
+ 
+    .plus-tab{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7em;
+        background-color: navy;
+        color: #fff;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        margin: 0;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        
+    }
+    #formDiv{
+    width: 100%;
+     background-color: rgb(237, 212, 231);
+    transition: max-height 0.7s ease-out;
+    overflow: hidden;
+    max-height: 0px;
+    position: absolute;
+    bottom: 0;
+    }
+    #formDiv.formIn{
+        max-height: 500px;
+    }
+    .formHeader{
+        text-align: center;
+        padding: 10px 0;
+        font-weight: 400;
+        font-size: 1.2em;
+        background-color: rgb(29, 7, 81);
+        color: #f0F0F0;
+    }
+    #formTag{
+        width: 100%;
+        padding:5px 7px;
+    }
+    .nameInput{
+        width: 100%;
+    }
+    .formSect{
+        margin: 20px 0;
+    }
+    #inputDiv{
+        width: 100%;
+    }
+    .imageInput{
+        width: 65%;
+        overflow: hidden;
+    }
+    input, select{
+        padding: 10px;
+        outline: none;
+        border: unset;
+        font-size: 1.2em;
+        background-color: #fff;
+        overflow: hidden;
+        // text-align: center;
+    }
+   
+    select::-webkit-scrollbar{
+        display: none;
+    }
+    label{
+        color: #222;
+    }
+    #inputDiv input, select{
+        width: 32%;
+    }
+    #btn-Div{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .btnSave{
+        width: 30%;
+        padding: 10px 4px;
+        border: unset;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 1.3em;
+        font-weight: 400;
+        color: #f0F0F0;
+        background: rgb(8, 8, 104);
+    }
+    .birthday-boxes{
+        width: 100%;
+        background-color: rgb(216, 14, 81);
+        // height: auto;
+    }
+    .display-imageDiv{
+        width: 100%;
+        border: 1px solid rgb(3, 3, 78);
+        font-size: 0.7em;
+        overflow: hidden;
+        padding: 0.4rem;
+        background-color: rgba(238, 232, 232, 0.65);
+        box-shadow: 5px 5px 8px #5a5a5a,
+        -5px -5px 8px rgb(216, 14, 81);
+        margin-bottom: 0.4rem;
+    }
+    .display-imageDiv::-webkit-scrollbar{
+        display: none;
+    }
+    .display-imageDiv.clean{
+        width: 47%;
+        height: 25vh;
+        object-fit: contain;
+        margin: 4px;
+    }
+    .image-profileDiv{
+        width: 100%;
+        height: 70%;
+       border-bottom: 2px solid Navy;
+    }
+    .image-profile{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 7px 7px  0 0;
+    }
+    .display-images{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3px;
+        margin-bottom: 25px;
+        // height: 60vh;
+    }
+    .display-images.flex{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        
+    }
+    .rectangle{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .rectangle p{
+        width: 13px;
+        height: 5px;
+        padding: 0 19px;
+        background-color: #cdcde2;
+        cursor: pointer;
+        border-radius: 17px 8px  17px 8px;
+       
+    }
+    .wishMsgDiv{
+    padding: 0 0.4rem;
+    font-style: italic;
+    text-transform: none;
+    text-align:start; 
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    margin: 4px;
+}
+.myWish{
+    width: 100%;
+    height: 1005;
+    background-color: #d66b9f;
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid wheat;
+    }
+    
+    .copyIconDiv{
+       width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-top: 10px;
+        position: relative;
+    }
+    .copyIcon{
+        height: fit-content;
+        padding: 2px 5px;
+        // outline: none;
+        border: unset;
+        border-radius: 3px;
+    }
+    .callmsg{
+        display: flex;
+        justify-content: space-between;   
+    }
+    .callmsg button{
+        font-size: 1.2em;
+        width: 100%;
+        background:  green;;
+        color: white;
+        border: unset;
+        padding: 0.2rem 0.6rem;
+        border-radius: 7px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+   
+    .instruction ul{
+        list-style-type:decimal ;
+
+    }
+    .welcome{
+        text-align: center;
+        color: navy;
+        font-size: 18px;
+        font-family: cursive;
+        font-weight: 600;
+       
+    }
+    .instruction{
+        width: 100%;
+        background: repeating-linear-gradient(65deg, rgb(7, 7, 242), rgb(230, 23, 92) 60%);
+        color: #f0F0F0;
+        padding-bottom: 10px;
+        
+    }
+    .guide{
+        text-align: center;
+        padding: 10px;
+        font-size: larger;
+        text-decoration: underline;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-weight: 700;
+        mix-blend-mode:overlay;
+    }
+    .instruction ul li{
+        display: flex;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        // justify-content: space-between;
+    }
+    .instruction ul li div{
+        margin-right: 10px;
+    }
+    .instruction img{
+        width: 14px;
+        // margin-right: 10px;
+    }
+    .plus-tab1{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        // padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        background: navy;
+        font-size: 1.2em;
+        color: #f0F0F0;
+        // margin: auto;
+    }
+    .presentDiv{
+        position: relative;
+    }
+    .notify{
+        position: absolute;
+        top: -12px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin: auto;    
+        font-size: 11px;
+        color: white;
+        font-weight: 500;
+    }
+    .sliderPage{
+        display: none;
+        margin: auto;
+        place-items: center;
+        width: 100%;
+        position: relative;
+    }
+    .sliderPage.sliderClose{
+        display: block;
+        position: relative;
+        height: 40%;
+    }
+    .sliderCont{
+         width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        
+    }
+
+    .right, .left{
+        position: absolute;
+        top: 25%;
+        font-size: 30px;
+        color: white;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .right{ right: 10px;}
+    .left{ left: 0px;}
+}

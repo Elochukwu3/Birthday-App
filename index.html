@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
+    <script src="jason.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div id="card-container">
+        <div class="card-wrapper">
+            <div id="card-inner">
+                <div class="header-text">
+                    <h2>Cards and wishes</h2>
+                    <p>@Romauld JB</p>
+                </div>
+                <div id="card-design-Div">
+                    <div class="designing-container">
+                        <div id="card-wishesDiv">
+                            <div class="wishesIcon"><img src="images/icon (2).png" alt=""></div>
+                            <div class="wishesText">Card and wishes</div>
+                            <div class="wishesIcon">&#10084; &#128293;</div>
+                        </div>
+                        <div id="designer2-container">
+                            <div id="card-button">
+                                <div class="btnDiv">
+                                    <button class="Btn" onclick="card()">Cards</button>
+                                    <button class="Btn" onclick="msg()">Wishes</button>
+                                </div>
+                            </div>
+                            <div class="grid-icons">
+                                <div class="double-grid"><span>&#x25a6;</span> <span>&#x25a6;</span></div>
+                                <div class="time" style="font-size: 20px;"></div>
+                                <div class="plus" onclick="instruct()" style="cursor: pointer;"> &#x2b;</div>
+                            </div>
+                            <div class="birthday-boxes">
+
+                                <h2 class="welcome">Welcome To Birthday Wishes App</h2>
+                                <div class="instruction">
+                                    <p class="guide">Guideline</p>
+                                    <ul>
+                                        <li style="color: black; font-size :15px;">Welcome, this app helps you to save
+                                            friends birthdays and notifies you on the date of the birthday.</li>
+                                        <li>
+                                            <div><i class="plus-tab1"> &#x2b;</i></div> click on the "blue icon" to fill
+                                            in bithdays of your friends, who you will like to save in reminder(You can
+                                            save as much as you can)
+                                        </li>
+                                        <li>
+                                            <div><img src="images/messages.png" alt="" class=""></div> click on the
+                                            "envelope icon" to see the list of friends' bithday you have saved
+                                        </li>
+                                        <li>
+                                            <div> <img src="images/Frame 22.png" alt="" class=""></div> click on the
+                                            "icon" to see the the list of friends whose birthday is on the current day
+                                        </li>
+                                        <li>
+                                            <div><img src="images/schedule.png" alt="" class=""></div> click on the
+                                            "text Icons" to see the the list of suitable wishes/messages(copy one from
+                                            it) provideed
+                                        </li>
+                                        <li>
+                                            <div><i> &#x2b;</i></div> click on this revisit "Guideline"
+                                        </li>
+                                        <li>
+                                            <div><i> &#128222;</i></div> click on the call icon to call the already
+                                            saved number from the form filled
+                                        </li>
+                                        <li>
+                                            <div><i> &#x2709;</i></div> click on the Msg icon to open a message app,
+                                            where the alraedy copied wish would be pasted
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="sliderPage">
+                                    <i class="left">&#10094;</i>
+                                    <i class="right">&#10095;</i>
+                                    <div class="sliderCont">
+
+                                    </div>
+                                </div>
+                                <div class="display-images">
+
+
+                                </div>
+                                <div id="formDiv">
+                                    <div class="formHeader">
+                                        <div class="rectangle">
+                                            <p onclick="closeForm() "></p>
+                                        </div>
+                                        <p>Fill In the Details of friend (birthday)&#x1f48c; &#128157; </p>
+                                    </div>
+                                    <form id="formTag">
+                                        <div class="formSect"><label for="firstNme">Name</label>
+                                            <input type="text" placeholder="name" class="nameInput" id="name"
+                                                name="nameInput" required>
+                                        </div>
+                                        <div class=" formSect"><label for="firstNme">Number</label>
+                                            <input type="text" placeholder="+2340001010" class="nameInput" id="number"
+                                                required>
+                                        </div>
+
+                                        <div class="formSect">
+                                            <div><label for="firstNme">Date 0f Birth</label></div>
+                                            <div id="inputDiv">
+                                                <select name="" id="day">
+                                                    <option value="Day" selected disabled>Day</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                                <!-- <input type="text" placeholder="day" required maxlength="2"> -->
+                                                <select name="month" id="month">
+                                                    <option value="Month" disabled selected>Month</option>
+                                                    <option value="1">1 Jan</option>
+                                                    <option value="2">2 Feb</option>
+                                                    <option value="3">3 March</option>
+                                                    <option value="4">4 April</option>
+                                                    <option value="5">5 May</option>
+                                                    <option value="6">6 June</option>
+                                                    <option value="7">7 July</option>
+                                                    <option value="8">8 August</option>
+                                                    <option value="9">9 Sept</option>
+                                                    <option value="10">10 Oct</option>
+                                                    <option value="11">11 Nov</option>
+                                                    <option value="12">12 Dec</option>
+                                                </select>
+                                                <!-- <input type="text" placeholder="month" id="month" required maxlength="2"> -->
+                                                <input type="text" placeholder="year" id="year" required maxlength="4">
+                                            </div>
+                                        </div>
+                                        <div class="imageDiv">
+                                         <p>Friend's Picture</p>
+                                            <input type="file" accept="image/*" class="imageInput">
+                                        </div>
+                                        <div id="btn-Div">
+                                            <button class="btnSave" type="submit">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="tabIcons">
+                                <div class="tab-double">
+                                    <i class="presentDiv">
+                                        <img src="images/Frame 22.png" alt="" class="presntBdayBtn">
+                                        <i class="notify"><span></span></i>
+                                    </i>
+                                    <img src="images/messages.png" alt="" class="messageIcon">
+                                </div>
+
+                                <div class="plus-tab" onclick="showForm()"> &#x2b;</div>
+                                <div class="tab-double">
+
+                                    <img src="images/schedule.png" alt="" class="wishesMsgIcon">
+                                    <img src="images/lists.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
