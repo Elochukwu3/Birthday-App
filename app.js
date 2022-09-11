@@ -27,26 +27,31 @@ const idNum = `${nameInput.value}${randomNum}`;
 let birthday = JSON.parse(localStorage.getItem("birthDays")) || [];
 let timeDisplay = document.querySelector(".time")
 timeDisplay.textContent = `${presentDate}/${presentMonth}/${currentYear}`
-console.log(code.value);
+
 function instruct() {
-  displayContainer.innerHTML = "";
-  instructionDiv.classList.toggle("clenn")
+  displayContainer.style.display = "none";
+  instructionDiv.classList.remove("clenn")
   welcome.innerHTML = "";
   sliderPage.classList.remove("sliderClose")
   formDiv.classList.remove("formIn");
+}
+function ending() {
+  instructionDiv.classList.add("clenn")
+  msg()
 }
 function showForm() {
 
   instructionDiv.classList.add("clenn")
   welcome.innerHTML = "";
   displayContainer.innerHTML = "";
-  formDiv.classList.toggle("formIn");
+  formDiv.classList.add("formIn");
   sliderPage.classList.remove("sliderClose")
 }
 function closeForm() {
   sliderPage.classList.remove("sliderClose")
   instructionDiv.classList.add("clenn")
   formDiv.classList.remove("formIn");
+  msg()
 }
 
 function showUrl() {
@@ -81,7 +86,7 @@ form.addEventListener("submit", (e) => {
   welcome.innerHTML = "";
   notice();
 });
-
+let delet;
 const showItems = (bd, ageValue) => {
   instructionDiv.classList.add("clenn")
   sliderCont.innerHTML = "";
@@ -90,57 +95,75 @@ const showItems = (bd, ageValue) => {
   const displayImg = document.createElement("img");
   const nameP = document.createElement("p");
   const ageP = document.createElement("p");
+  const btnDiv = document.createElement("p");
+   delet = document.createElement("button");
   callMsg = document.createElement("div");
 
   containerInner.classList.add("display-imageDiv");
   displayImg.classList.add("image-profile");
   ImageDiv.classList.add("image-profileDiv");
+  delet.classList.add("delet")
+  btnDiv.classList.add("deletCont")
 
   displayContainer.appendChild(containerInner);
   containerInner.appendChild(ImageDiv);
   containerInner.appendChild(nameP);
   containerInner.appendChild(ageP);
+  containerInner.appendChild(btnDiv);
   containerInner.appendChild(callMsg);
   ImageDiv.appendChild(displayImg);
+  btnDiv.appendChild(delet)
   nameP.innerHTML = ` Name: ${bd.name}`;
   ageP.innerHTML = ageValue;
   displayImg.src = bd.image;
+  delet.innerHTML = "delete"
   container = containerInner;
+
 };
 
 function card() {
   formDiv.classList.remove("formIn");
   sliderPage.classList.remove("sliderClose")
   welcome.innerHTML = "List of Saved Bithday Celebrants";
-  displayContainer.classList.remove("flex");
+  
+  displayContainer.classList.add("flex");
   displayContainer.innerHTML = "";
   //    if nothing is in the localStorage
   !localStorage.getItem("birthDays")
     ? console.log("null")
-    : (birthday = JSON.parse(localStorage.getItem("birthDays")));
+    : (birthday = JSON.parse(localStorage.getItem("birthDays")))
   birthday.forEach((bd) => {
     dateOfBirth = `BirthDay:${bd.day}/ ${bd.month}`;
     showItems(bd, dateOfBirth);
+    delet.addEventListener("click", ()=>{
+    birthday =  birthday.filter(f=>{
+      
+      return f !== bd;
+        });
+        localStorage.setItem("birthDays", JSON.stringify(birthday));
+        card()
+       })
+   
   });
 }
 messageIcon.addEventListener("click", card);
 
 presentBirthDayBtn.addEventListener("click", () => {
+  displayContainer.classList.add("flex");
 let filt;
   sliderPage.classList.remove("sliderClose")
   formDiv.classList.remove("formIn");
   welcome.innerHTML = "list of Birthday Celebrant(s) Today";
   displayContainer.innerHTML = "";
+  instructionDiv.classList.add("clenn")
   //    if nothing is in the localStorage
   !localStorage.getItem("birthDays")
     ? console.log("null")
     : (filt = JSON.parse(localStorage.getItem("birthDays")));
   const filterBirthday = filt.filter((h) => {
     if (h.month == presentMonth && h.day == presentDate) {
-      displayContainer.innerHTML = "";
       return h;
     }else{
-      displayContainer.innerHTML = " no birthday Today"
     }
   });
   filterBirthday.forEach((bd) => {
@@ -173,11 +196,12 @@ let filt;
     btnWhatsI.classList.add("fa-whatsapp")
     callMsg.classList.add("callmsg");
     displayContainer.classList.add("flex");
+    // displayContainer.style.display = "none";
     container.classList.add("clean");
     aCall.href = `Tel: ${bd.number}`;
     aMsg.href = `sms:${bd.codeVal}${bd.number}`;
     aWhats.href = `https://wa.me/${bd.codeVal}${bd.number}`;
-    console.log(bd.codeVal);
+
   
   });
 });

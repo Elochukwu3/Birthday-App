@@ -255,14 +255,16 @@
         background-color: rgba(238, 232, 232, 0.65);
         box-shadow: 5px 5px 8px #5a5a5a,
         -5px -5px 8px rgb(216, 14, 81);
-        margin-bottom: 0.4rem;
+        // margin-bottom: 0.4rem;
+        height: 28vh;
+        margin: 3px;
     }
     .display-imageDiv::-webkit-scrollbar{
         display: none;
     }
     .display-imageDiv.clean{
-        width: 47%;
-        height: 25vh;
+        // width: 50%;
+        height: 28vh;
         object-fit: contain;
         margin: 4px;
     }
@@ -283,13 +285,16 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 3px;
         margin-bottom: 25px;
-        // height: 60vh;
+        height: 69vh;
+        overflow-y: scroll;
+        display: none;
     }
     .display-images.flex{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        
+        height: 69vh;
+        overflow-y: scroll;
         
     }
     .rectangle{
@@ -375,10 +380,22 @@
         width: 100%;
         color: #f0F0F0;
         padding-bottom: 10px;
-        height: 70vh;
+        // height: 70vh;
     }
     .instruction.clenn{
         display: none;
+    }
+    .guardCont{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+    .end{
+        font-size: 1.4em;
+        background: red;
+        padding: 0px 5px;
+        cursor: pointer;
     }
     .guide{
         text-align: center;
@@ -388,7 +405,8 @@
         letter-spacing: 5px;
         text-transform: uppercase;
         font-weight: 700;
-        mix-blend-mode:overlay;
+        width: 85%;
+        // mix-blend-mode:overlay;
     }
     .instruction ul li{
         display: flex;
@@ -470,5 +488,20 @@
     }
     .fa-whatsapp{
         color: white;
+        padding: 3px;
+    }
+    .deletCont{
+display: flex;
+justify-content: flex-end;
+padding-bottom: 3px;
+    }
+    .delet{
+        padding: 3px 2px;
+        background: red;
+        border: unset;
+        border-radius: 5px;
+        font-size: 13px;
+        color: #fff;
+        cursor: pointer;
     }
 }

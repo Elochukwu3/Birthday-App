@@ -236,14 +236,14 @@
   padding: 0.4rem;
   background-color: rgba(238, 232, 232, 0.65);
   box-shadow: 5px 5px 8px #5a5a5a, -5px -5px 8px rgb(216, 14, 81);
-  margin-bottom: 0.4rem;
+  height: 28vh;
+  margin: 3px;
 }
 #card-container .display-imageDiv::-webkit-scrollbar {
   display: none;
 }
 #card-container .display-imageDiv.clean {
-  width: 47%;
-  height: 25vh;
+  height: 28vh;
   -o-object-fit: contain;
      object-fit: contain;
   margin: 4px;
@@ -266,11 +266,16 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3px;
   margin-bottom: 25px;
+  height: 69vh;
+  overflow-y: scroll;
+  display: none;
 }
 #card-container .display-images.flex {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: 69vh;
+  overflow-y: scroll;
 }
 #card-container .rectangle {
   width: 100%;
@@ -351,10 +356,20 @@
   width: 100%;
   color: #f0F0F0;
   padding-bottom: 10px;
-  height: 70vh;
 }
 #card-container .instruction.clenn {
   display: none;
+}
+#card-container .guardCont {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#card-container .end {
+  font-size: 1.4em;
+  background: red;
+  padding: 0px 5px;
+  cursor: pointer;
 }
 #card-container .guide {
   text-align: center;
@@ -364,7 +379,7 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 700;
-  mix-blend-mode: overlay;
+  width: 85%;
 }
 #card-container .instruction ul li {
   display: flex;
@@ -446,4 +461,19 @@
 }
 #card-container .fa-whatsapp {
   color: white;
+  padding: 3px;
+}
+#card-container .deletCont {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 3px;
+}
+#card-container .delet {
+  padding: 3px 2px;
+  background: red;
+  border: unset;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
