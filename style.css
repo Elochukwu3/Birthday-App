@@ -480,7 +480,7 @@
 }
 @media screen and (max-width: 410px) {
   #card-container .display-imageDiv.clean {
-    height: 30vh;
+    height: 34vh;
   }
   #card-container .image-profileDiv {
     width: 100%;

@@ -143,6 +143,7 @@ function card() {
         });
         localStorage.setItem("birthDays", JSON.stringify(birthday));
         card()
+        notice();
        })
    
   });
