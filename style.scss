@@ -249,38 +249,40 @@
     .display-imageDiv{
         width: 100%;
         border: 1px solid rgb(3, 3, 78);
-        font-size: 0.7em;
+        font-size: 1em;
         overflow: hidden;
         padding: 0.4rem;
         background-color: rgba(238, 232, 232, 0.65);
         box-shadow: 5px 5px 8px #5a5a5a,
-        -5px -5px 8px rgb(216, 14, 81);
-        // margin-bottom: 0.4rem;
-        height: 28vh;
-        margin: 3px;
+        -5px -5px 8px hwb(340 5% 15%);
+        width: 80%;
+        height: 30vh;
+        margin: 4px;
     }
     .display-imageDiv::-webkit-scrollbar{
         display: none;
     }
     .display-imageDiv.clean{
-        // width: 50%;
-        height: 28vh;
-        object-fit: contain;
+        width: 80%;
+        height: 40vh;
         margin: 4px;
+        font-size: 1em;
+        padding: auto;
+        
     }
     .image-profileDiv{
         width: 100%;
-        height: 70%;
+        height: 60%;
        border-bottom: 2px solid Navy;
+       object-fit: contain;
     }
     .image-profile{
-        width: 100%;
+        width: 100% ;
         height: 100%;
-        object-fit: cover;
         border-radius: 7px 7px  0 0;
     }
     .display-images{
-        display: grid;
+        // display: grid;
         width: 100%;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 3px;
@@ -504,4 +506,26 @@ padding-bottom: 3px;
         color: #fff;
         cursor: pointer;
     }
+    @media screen and (max-width:"410px") {
+        
+        .display-imageDiv.clean{
+            height: 30vh;
+        }
+            .image-profileDiv{
+                width: 100%;
+                height: 70%;
+               border: none;
+            //    object-fit: contain;
+            }
+            .image-profile{
+                width: 100% ;
+                height: 100%;
+                // object-fit: cover;
+                border-radius: 7px 7px  0 0;
+                border-bottom: 2px solid Navy;
+            } 
+            
+        }
+      
+    
 }

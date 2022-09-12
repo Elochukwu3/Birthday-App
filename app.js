@@ -29,7 +29,7 @@ let timeDisplay = document.querySelector(".time")
 timeDisplay.textContent = `${presentDate}/${presentMonth}/${currentYear}`
 
 function instruct() {
-  displayContainer.style.display = "none";
+  // displayContainer.style.display = "none";
   instructionDiv.classList.remove("clenn")
   welcome.innerHTML = "";
   sliderPage.classList.remove("sliderClose")
@@ -87,6 +87,7 @@ form.addEventListener("submit", (e) => {
   notice();
 });
 let delet;
+let btnDiv;
 const showItems = (bd, ageValue) => {
   instructionDiv.classList.add("clenn")
   sliderCont.innerHTML = "";
@@ -95,7 +96,7 @@ const showItems = (bd, ageValue) => {
   const displayImg = document.createElement("img");
   const nameP = document.createElement("p");
   const ageP = document.createElement("p");
-  const btnDiv = document.createElement("p");
+  btnDiv = document.createElement("p");
    delet = document.createElement("button");
   callMsg = document.createElement("div");
 
@@ -193,10 +194,10 @@ let filt;
     btnWhats.appendChild(btnWhatsI)
     btnCall.innerHTML = "&#128222";
     btnMsg.innerHTML = "&#x2709;";
-    btnWhatsI.classList.add("fa-whatsapp")
+    btnWhatsI.innerHTML = "&#9990;"
     callMsg.classList.add("callmsg");
     displayContainer.classList.add("flex");
-    // displayContainer.style.display = "none";
+    btnDiv.style.display = "none";
     container.classList.add("clean");
     aCall.href = `Tel: ${bd.number}`;
     aMsg.href = `sms:${bd.codeVal}${bd.number}`;
