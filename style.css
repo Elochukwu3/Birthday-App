@@ -312,14 +312,6 @@
   border-radius: 5px;
   border: 2px solid wheat;
 }
-#card-container .copyIconDiv {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-top: 10px;
-  position: relative;
-}
 #card-container .copyIcon {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -327,6 +319,7 @@
   padding: 2px 5px;
   border: unset;
   border-radius: 3px;
+  float: right !important;
 }
 #card-container .callmsg {
   display: flex;
@@ -480,7 +473,7 @@
 }
 @media screen and (max-width: 410px) {
   #card-container .display-imageDiv.clean {
-    height: 34vh;
+    height: 36vh;
   }
   #card-container .image-profileDiv {
     width: 100%;

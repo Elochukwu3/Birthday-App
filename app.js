@@ -227,24 +227,29 @@ function msg() {
     } = msg;
     return `
       
-      <div class="wishMsgDiv">
+    <div class="wishMsgDiv">
       <div class="myWish">
       <p id="wishInput">${cakeEmoji1}${message}</p>
       <p id="emoji">${emoji2}  ${emoji4} ${emoji5}${emoji6YellowT}</p>
       </div>  
-     <div class="copyIconDiv"><p class= "copied"> </P> <button class="copyIcon">Copy</button></div>
-  </div>
+      <button class="copyIcon">Copy</button>
   </div>
   `;
   });
   sliderCont.innerHTML = wishDisplay.join("");
   // copy text
- let myWish = document.querySelector(".myWish");
+
   const copy = document.querySelectorAll(".copyIcon");
   copy.forEach((c) => {
     c.addEventListener("click", (e) => {
-      myWish = myWish.textContent;
-      navigator.clipboard.writeText(myWish);
+     
+      const getParent = c.parentElement;
+      console.log(getParent);
+     let child = getParent.children[1];
+     let myWish = getParent.querySelector(".myWish");
+
+   let cop = myWish.textContent;
+     navigator.clipboard.writeText(cop);
     });
     
   });

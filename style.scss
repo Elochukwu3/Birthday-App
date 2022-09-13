@@ -335,20 +335,14 @@
     border: 2px solid wheat;
     }
     
-    .copyIconDiv{
-       width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding-top: 10px;
-        position: relative;
-    }
     .copyIcon{
         height: fit-content;
         padding: 2px 5px;
         // outline: none;
         border: unset;
         border-radius: 3px;
+        float: right !important;
+      
     }
     .callmsg{
         display: flex;
@@ -509,7 +503,7 @@ padding-bottom: 3px;
     @media screen and (max-width:"410px") {
         
         .display-imageDiv.clean{
-            height: 34vh;
+            height: 36vh;
         }
             .image-profileDiv{
                 width: 100%;
